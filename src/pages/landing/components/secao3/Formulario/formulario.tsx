@@ -13,6 +13,7 @@ export function Formulario() {
         const data_ = JSON.stringify(respostas)
         event.preventDefault();
         console.log(data_)
+        alert("Formulário enviado com sucesso!")
     }
   return (
     <>
