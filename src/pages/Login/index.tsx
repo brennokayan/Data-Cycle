@@ -36,7 +36,7 @@ export function LoginPage() {
           justifyContent={"center"}
           borderRadius={"10px"}
         >
-          <IconButton>
+          <IconButton onClick={() => {window.location.href=("/")}}>
             <DefaultIcons.VoltarIcon />
           </IconButton>
           <Box
