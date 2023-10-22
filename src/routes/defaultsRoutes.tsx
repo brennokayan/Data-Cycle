@@ -6,9 +6,10 @@ import { ClientHomePage } from "../pages/User/cliente";
 import { LoginPage } from "../pages/Login";
 import PrivateRoutes from "./privatesRoutes";
 import { NotFoundPage } from "../pages/NotFound";
-import { ProfilePage } from "../pages/User/profile";
+// import { ProfilePage } from "../pages/User/profile";
 import { Consultoria } from "../pages/Consultoria";
 import { LogReversa } from "../pages/LogReversa";
+import { Resultados } from "../pages/User/resultados";
 export function DefaultRoutes() {
   return (
     <BrowserRouter>
@@ -18,7 +19,7 @@ export function DefaultRoutes() {
         <Route element={<Consultoria />} path="/consultoria" />
         <Route element={<LogReversa />} path="logistica-reversa" />
         <Route element={<PrivateRoutes />}>
-          <Route element={<ProfilePage />} path="/profile" />
+          <Route element={<Resultados />} path="/resultados" />
           <Route element={<ClientHomePage />} path="/user" />
         </Route>
         <Route element={<NotFoundPage />} path="*" />

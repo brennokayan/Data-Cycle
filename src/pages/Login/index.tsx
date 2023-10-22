@@ -1,8 +1,9 @@
-import { Box, Button, TextField } from "@mui/material";
+import { Box, Button, TextField, IconButton } from "@mui/material";
 import logoVazio from "../../assets/1.png";
 import { UserLogin } from "../../Types/UserLogin";
 import { useState } from "react";
 import { login } from "../../service/auth";
+import { DefaultIcons } from "../../constants/DefaultIcons";
 
 export function LoginPage() {
   const [userData, setUserData] = useState<UserLogin>({
@@ -35,6 +36,9 @@ export function LoginPage() {
           justifyContent={"center"}
           borderRadius={"10px"}
         >
+          <IconButton>
+            <DefaultIcons.VoltarIcon />
+          </IconButton>
           <Box
             component={"img"}
             src={logoVazio}

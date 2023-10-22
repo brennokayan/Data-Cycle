@@ -52,14 +52,14 @@ export default function TemporaryDrawer({ title }: props) {
       <List>
         <ListItemDrawer
           size={28}
-          text="Dashboard"
+          text="Questionário"
           route="/user/"
           Icon={DefaultIcons.DashboardIcosn}
         />
         <ListItemDrawer
           size={28}
-          text="Perfil"
-          route="/profile"
+          text="Resultados"
+          route="/resultados"
           Icon={DefaultIcons.UsuarioIcon} />
       </List>
       <Divider />

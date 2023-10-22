@@ -39,7 +39,7 @@ export function LandingPage() {
           alignItems={"center"} justifyContent={"center"} gap={2}>
             <ButtonConhecaNos href="/consultoria" cor="white" corLetra="black" corBorda="black" title="Consultoria" />
             <ButtonConhecaNos href="/logistica-reversa" cor="white" corLetra="black" corBorda="black" title="Logistica reversa" />
-            {/* <ButtonConhecaNos href="/gestao" cor="white" corLetra="black" corBorda="black" title="Gestão" /> */}
+            <ButtonConhecaNos href="/login" cor="white" corLetra="black" corBorda="black" title="Login" />
           </Box>
       </Box>
       </div>

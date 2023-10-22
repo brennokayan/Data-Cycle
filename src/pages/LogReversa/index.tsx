@@ -1,5 +1,6 @@
-import { Box, Paper } from "@mui/material";
+import { Box, IconButton, Paper } from "@mui/material";
 import imagemLogistica from "../../assets/logistica-reversa-1.jpg"
+import { DefaultIcons } from "../../constants/DefaultIcons";
 export function LogReversa() {
   return (
     <>
@@ -22,7 +23,12 @@ export function LogReversa() {
             px={"15%"}
             gap={2}
           >
+            <Box display={"flex"} alignItems={"center"} gap={8}>
+              <IconButton onClick={() => {window.location.href=("/")}}>
+                <DefaultIcons.VoltarIcon />
+              </IconButton>
             <h1>Logística Reversa: Soluções Eficientes</h1>
+            </Box>
             <img src={imagemLogistica} height={"40%"} width={"40%"}/>
             <p>
               Nossa expertise em logística reversa oferece soluções eficazes
