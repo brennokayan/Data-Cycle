@@ -2,19 +2,19 @@ import React, { useState } from "react";
 import { Box, TextField, Button } from "@mui/material";
 
 export function Formulario() {
-    const [respostas, setRespostas] = useState({
-        resposta1: "",
-        resposta2: "",
-        resposta3: "",
-        resposta4: "",
-        resposta5: "",
-    })
-    const handleSubmit = (event: React.FormEvent) => {
-        const data_ = JSON.stringify(respostas)
-        event.preventDefault();
-        console.log(data_)
-        alert("Formulário enviado com sucesso!")
-    }
+  const [respostas, setRespostas] = useState({
+    resposta1: "",
+    resposta2: "",
+    resposta3: "",
+    resposta4: "",
+    resposta5: "",
+  });
+  const handleSubmit = (event: React.FormEvent) => {
+    const data_ = JSON.stringify(respostas);
+    event.preventDefault();
+    console.log(data_);
+    alert("Formulário enviado com sucesso!");
+  };
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -24,28 +24,52 @@ export function Formulario() {
               1 - Como as peças defeituosas ou danificadas são atualmente
               gerenciadas em sua empresa?{" "}
             </p>
-            <TextField label="Resposta 1" fullWidth onChange={(event) => {setRespostas({...respostas, resposta1: event.target.value})}} />
+            <TextField
+              label="Resposta 1"
+              fullWidth
+              onChange={(event) => {
+                setRespostas({ ...respostas, resposta1: event.target.value });
+              }}
+            />
           </Box>
           <Box display={"flex"} flexDirection={"column"} gap={1}>
             <p>
               2 - Existe um processo estabelecido para identificar, classificar
               e separar peças que podem ser reutilizadas ou recicladas?
             </p>
-            <TextField label="Resposta 2" fullWidth onChange={(event) => {setRespostas({...respostas, resposta2: event.target.value})}}/>
+            <TextField
+              label="Resposta 2"
+              fullWidth
+              onChange={(event) => {
+                setRespostas({ ...respostas, resposta2: event.target.value });
+              }}
+            />
           </Box>
           <Box display={"flex"} flexDirection={"column"} gap={1}>
             <p>
               3 - Quais são os critérios para determinar se uma peça deve ser
               descartada, reparada, recondicionada ou reciclada?
             </p>
-            <TextField label="Resposta 3" fullWidth onChange={(event) => {setRespostas({...respostas, resposta3: event.target.value})}}/>
+            <TextField
+              label="Resposta 3"
+              fullWidth
+              onChange={(event) => {
+                setRespostas({ ...respostas, resposta3: event.target.value });
+              }}
+            />
           </Box>
           <Box display={"flex"} flexDirection={"column"} gap={1}>
             <p>
               4 - Como é feita a coleta e armazenamento de peças antigas ou não
               utilizadas? Existe um inventário claro dessas peças?
             </p>
-            <TextField label="Resposta 4" fullWidth onChange={(event) => {setRespostas({...respostas, resposta4: event.target.value})}}/>
+            <TextField
+              label="Resposta 4"
+              fullWidth
+              onChange={(event) => {
+                setRespostas({ ...respostas, resposta4: event.target.value });
+              }}
+            />
           </Box>
           <Box display={"flex"} flexDirection={"column"} gap={1}>
             <p>
@@ -53,7 +77,13 @@ export function Formulario() {
               reciclagem de peças de tecnologia? Em caso afirmativo, como é
               feita essa colaboração?
             </p>
-            <TextField label="Resposta 5" fullWidth onChange={(event) => {setRespostas({...respostas, resposta5: event.target.value})}}/>
+            <TextField
+              label="Resposta 5"
+              fullWidth
+              onChange={(event) => {
+                setRespostas({ ...respostas, resposta5: event.target.value });
+              }}
+            />
           </Box>
           {/* <Box display={"flex"} flexDirection={"column"} gap={1}>
           <p>
@@ -94,7 +124,12 @@ export function Formulario() {
           <TextField label="Resposta 10" fullWidth />
         </Box> */}
         </Box>
-        <Box mt={4} display={"flex"} alignItems={"center"} justifyContent={"center"}>
+        <Box
+          mt={4}
+          display={"flex"}
+          alignItems={"center"}
+          justifyContent={"center"}
+        >
           <Button variant={"contained"} type="submit">
             Enviar
           </Button>
