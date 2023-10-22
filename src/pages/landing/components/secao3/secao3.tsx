@@ -1,5 +1,5 @@
-import { Box } from "@mui/material";
-import { CarroselProdutos } from "../CarroselProdutos";
+import { Box, Button } from "@mui/material";
+
 
 export function Secao3() {
   return (
@@ -12,8 +12,8 @@ export function Secao3() {
           alignItems={"center"}
           justifyContent={"space-evenly"}
         >
-          <h1>Nossos produtos</h1>
-          <CarroselProdutos />
+          <h1>Formulário</h1>
+          <Button onClick={() => {window.location.href=("/login")}}>Enviar</Button>
         </Box>
       </div>
     </>
