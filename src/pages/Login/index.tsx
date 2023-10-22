@@ -11,15 +11,8 @@ export function LoginPage() {
   });
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (
-      userData.email === "user@hackathon.com" &&
-      userData.password === "Sicredi"
-    ) {
-      login("acessToken");
-      window.location.href = "/user/";
-    } else {
-      alert("Email ou senha incorretos");
-    }
+    login("acessToken");
+    window.location.href = "/user/";
   };
   return (
     <>
@@ -55,7 +48,6 @@ export function LoginPage() {
               width={"100%"}
             >
               <TextField
-                required
                 fullWidth
                 label="Usuário - Email"
                 type={"email"}
@@ -64,7 +56,6 @@ export function LoginPage() {
                 }}
               />
               <TextField
-                required
                 label="Senha"
                 type={"password"}
                 onChange={(event) => {
