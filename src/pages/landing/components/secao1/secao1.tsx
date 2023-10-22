@@ -35,8 +35,10 @@ export function Secao1() {
           </p>
         </Box>
           <Box width={"100%"} display={"flex"}
-          alignItems={"center"} justifyContent={"center"}>
-            <ButtonConhecaNos href="#quem-somos" cor="white" corLetra="black" corBorda="black" title="Venha nos conhecer" />
+          alignItems={"center"} justifyContent={"center"} gap={2}>
+            <ButtonConhecaNos href="/consultoria" cor="white" corLetra="black" corBorda="black" title="Consultoria" />
+            <ButtonConhecaNos href="/logistica-reversa" cor="white" corLetra="black" corBorda="black" title="Logistica reversa" />
+            <ButtonConhecaNos href="/gestao" cor="white" corLetra="black" corBorda="black" title="Gestão" />
           </Box>
       </Box>
       </div>

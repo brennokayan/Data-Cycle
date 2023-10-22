@@ -7,9 +7,6 @@
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
-    animation-name: example;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
     text-decoration: none;
 }
 @keyframes example {

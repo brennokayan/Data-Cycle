@@ -7,12 +7,16 @@ import { LoginPage } from "../pages/Login";
 import PrivateRoutes from "./privatesRoutes";
 import { NotFoundPage } from "../pages/NotFound";
 import { ProfilePage } from "../pages/User/profile";
+import { Consultoria } from "../pages/Consultoria";
+import { LogReversa } from "../pages/LogReversa";
 export function DefaultRoutes() {
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<LoginPage />} path="/login" />
         <Route element={<LandingPage />} path="/" />
+        <Route element={<Consultoria />} path="/consultoria" />
+        <Route element={<LogReversa />} path="logistica-reversa" />
         <Route element={<PrivateRoutes />}>
           <Route element={<ProfilePage />} path="/profile" />
           <Route element={<ClientHomePage />} path="/user" />

@@ -18,7 +18,7 @@ export function Formulario() {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <Box display={"grid"} gridTemplateColumns={"auto auto"} px={2} gap={2}>
+        <Box display={"grid"} gridTemplateColumns={"auto"} px={2} gap={2}>
           <Box display={"flex"} flexDirection={"column"} gap={1}>
             <p>
               1 - Como as peças defeituosas ou danificadas são atualmente
