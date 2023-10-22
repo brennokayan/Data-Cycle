@@ -1,5 +1,5 @@
-import { Box, Button } from "@mui/material";
-
+import { Box } from "@mui/material";
+import { Formulario } from "./Formulario/formulario";
 
 export function Secao3() {
   return (
@@ -12,8 +12,17 @@ export function Secao3() {
           alignItems={"center"}
           justifyContent={"space-evenly"}
         >
-          <h1>Formulário</h1>
-          <Button onClick={() => {window.location.href=("/login")}}>Enviar</Button>
+          <Box
+            display={"flex"}
+            flexDirection={"column"}
+            gap={4}
+            justifyContent={"center"}
+            alignItems={"center"}
+            pt={4}
+          >
+            <h1>Formulário</h1>
+            <Formulario />
+          </Box>
         </Box>
       </div>
     </>
