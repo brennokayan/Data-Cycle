@@ -9,7 +9,6 @@ import { ListItemDrawer } from "./ListItemDrawer";
 import { IconButton, Typography } from "@mui/material";
 import { LogoutItemDrawer } from "./LogoutItemDrawer";
 
-type Anchor = "left";
 interface props {
   title: string;
 }
@@ -17,7 +16,7 @@ export default function TemporaryDrawer({ title }: props) {
   const [state, setState] = React.useState(false);
 
   const toggleDrawer =
-    (anchor: Anchor, open: boolean) =>
+    (open: boolean) =>
     (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
         event.type === "keydown" &&
@@ -30,12 +29,12 @@ export default function TemporaryDrawer({ title }: props) {
       setState(open);
     };
 
-  const list = (anchor: Anchor) => (
+  const list = () => (
     <Box
       width={250}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer( false)}
     >
       <Box p={2}>
         <Box
@@ -44,7 +43,7 @@ export default function TemporaryDrawer({ title }: props) {
           justifyContent={"start"}
           gap={4}
         >
-          <IconButton onClick={toggleDrawer("left", false)}>
+          <IconButton onClick={toggleDrawer(false)}>
             <DefaultIcons.VoltarIcon size={22} color="black" />
           </IconButton>
           <Typography textAlign={"center"}>{title}</Typography>
@@ -72,15 +71,15 @@ export default function TemporaryDrawer({ title }: props) {
 
   return (
     <div>
-      <Button onClick={toggleDrawer("left", true)}>
+      <Button onClick={toggleDrawer( true)}>
         <DefaultIcons.MenuIcons color="black" size={28} />
       </Button>
       <Drawer
         anchor={"left"}
         open={state}
-        onClose={toggleDrawer("left", false)}
+        onClose={toggleDrawer( false)}
       >
-        {list("left")}
+        {list()}
       </Drawer>
     </div>
   );
